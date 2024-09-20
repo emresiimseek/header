@@ -1,0 +1,292 @@
+$color-lorem: #800080;
+$color-alizarin-crimson: #e02828;
+$color-alizarin-crimson-2: #ec1d24;
+$color-alto: #d8d8d8;
+$color-alto-2: #dadada;
+$color-alto-3: #dddddd;
+$color-apple: #388e3c;
+$color-aqua-haze: #f7fbfa;
+$color-azure: #325a9d;
+$color-amaranth: #ee4358;
+$color-amaranth-2: #eb2a5d;
+$color-amethyst-smoke: #988ea8;
+$color-bright-sun: #fdd835;
+$color-black: #000000;
+$color-bossanova: #453461;
+$color-boulder: #747474;
+$color-bright-red: #b30000;
+$color-brown: #8f4400;
+$color-camarone: #006609;
+$color-chambray: #3b5998;
+$color-chablis: #fff7f8;
+$color-clementine: #e96e00;
+$color-cod-gray: #111111;
+$color-cod-gray-2: #1a1919;
+$color-cod-gray-3: #060606;
+$color-concrete: #f3f3f3;
+$color-crimson: #ec1a29;
+$color-dodger-blue: #3878ff;
+$color-dove-gray: #6a6a6a;
+$color-dusty-gray: #939393;
+$color-dusty-gray-2: #999999;
+$color-dusty-gray-3: #9b9b9b;
+$color-eastern-blue: #14a2c2;
+$color-egg-sour: #fff3db;
+$color-emerald: #34c759;
+$color-emperor: #555555;
+$color-froly: #f15f70;
+$color-flame-pea: #d2593d;
+$color-gray: #939393;
+$color-gray-2: #888888;
+$color-gray-three: #818181;
+$color-guardsman-red: #bb0000;
+$color-havelock-blue: #4a90e2;
+$color-mariner: #2882b7;
+$color-mariner-2: #1e72da;
+$color-mineshaft: #212121;
+$color-mischka: #d7d8e1;
+$color-picton-blue: #55acee;
+$color-bay-of-many: #2a4c85;
+$color-punch: #d62929;
+$color-ripe-lemon: #f8e71c;
+$color-ripe-lemon-2: #f7e91a;
+$color-sea-green: #378f3c;
+$color-scorpion: #5c5c5c;
+$color-scorpion-2: #595959;
+$color-shamrock: #33d16b;
+$color-silver: #cccccc;
+$color-silver-2: #cccccc;
+$color-silver-3: #c5c5c5;
+$color-silver-chalice: #b1b1b1;
+$color-silver-chalice-2: #a3a3a3;
+$color-silver-chalice-3: #aaaaaa;
+$color-illusion: #f9babf;
+$color-tundora: #424242;
+$color-valencia: #d63c4f;
+$color-valhalla: #301d50;
+$color-valhalla-two: #261740;
+$color-valhalla-three: #311d51;
+$color-white: #ffffff;
+$color-wildsand: #f4f4f4;
+$color-wildsand-2: #ececec;
+$color-wildsand-3: #f6f6f6;
+$color-mercury: #e5e5e5;
+$color-mercury-2: #e4e4e4;
+$color-mercury-3: #e3e3e3;
+$color-mercury-4: #e6e6e6;
+$color-seashell: #f1f1f1;
+$color-spun-pearl: #a5a6b1;
+$color-spun-pearl-two: #c6c6c6;
+$color-gallery: #eeeeee;
+$color-gallery-two: #eaeaea;
+$color-gallery-three: #ebebeb;
+$color-cerulean: #009ceb;
+$color-traffic-turbo: #ffed00;
+$color-turbo2: #eeda00;
+$color-deep-cerulean: #0274b3;
+$color-cardinal: #e30b2b;
+$color-cruious-blue-2: #2094cf;
+$color-mantis: #76c356;
+$color-japanese-aurel: #00a200;
+$color-screamin-green: #77f671;
+$color-corn: #e5cd00;
+$color-mine-shaft: #212121;
+$color-mine-shaft-2: #333333;
+$color-mineshaft-3: #222222;
+$color-mineshaft-4: #212020;
+$color-mineshaft-5: #2a2929;
+$color-red: #ed1d24;
+$color-red-ribbon: #f3202f;
+$color-red-two: #fb000f;
+$color-red-three: #ea293a;
+$color-red-four: #f70000;
+$color-red-five: #e90a02;
+$color-red-orange: #ff3b30;
+$color-red-six: #fe0000;
+$color-cherry: #ff000e;
+$color-lima: #72bb13;
+$color-lima-2: #75cd15;
+$color-sulu: #b9f17c;
+$color-light-blue: #4a90e2;
+$color-lighten-blue: #029cec;
+$color-yellow-dark: #ffcc01;
+$color-ripe-lemon2: #f7e91a;
+$color-christi: #5d9b0d;
+$color-orange: #f58519;
+$color-flush-orange: #ff7e00;
+$color-monsoon-light: #979797;
+$color-monsoon-light-two: #7f7f7f;
+$color-lemon-chiffon: #fffbc3;
+$color-raw-sienna: #d47938;
+$color-thunderbird: #b23313;
+$color-tundora-two: #4a4a4a;
+$color-tundora-three: #4d4d4d;
+$color-trinidad: #e73d00;
+$color-gallery-twitter: #26aff4;
+$color-gallery-easy: #3b9af5;
+$color-gallery-hard: #c52a03;
+$color-gallery-medium: #2cb49e;
+$color-mine-shaft-two: #323232;
+$color-mine-shaft-3: #2a2a2a;
+$color-gallery-orange: #ff5001;
+$color-mandy: #e15b4d;
+$color-salem: #0a8d21;
+$color-lochmara: #007ade;
+$color-tangerine: #e59d00;
+$color-tangerine-2: #d99400;
+$color-tangerine-3: #e69d01;
+$color-topaz: #837797;
+$color-medium-red-violet: #b63594;
+$color-pelerous: #34b1b7;
+$color-purple-heart: #5645cd;
+$color-puerto-rico: #3ac7a8;
+$color-monza: #d90019;
+$color-dixie: #e7a61a;
+$color-jacarta: #2c2267;
+$color-logan: #ac9cc7;
+$color-shilo: #e6aab1;
+$color-denim: #1385d4;
+$color-denim-2: #0d71da;
+$color-venice-blue: #09519c;
+$color-mountain-meadow: #17c078;
+$color-monza-2: #e10c0c;
+$color-my-sin: #ffbc1a;
+$color-carnation: #f14356;
+$color-razzmatazz: #e31766;
+$color-casal: #335e6b;
+$color-old-gold: #d7a740;
+$color-alabaster: #f9f9f9;
+$color-alabaster-2: #f7f7f7;
+$color-cadde-header: #dd0f1e;
+$color-seance: #7f19b2;
+$color-goblin: #3f9346;
+$color-chathams-blue: #164965;
+$color-sunglow: #ffcb38;
+$color-tea-green: #cbeab5;
+$color-mint-tulip: #bbf1e5;
+$color-your-pink: #ffbcbc;
+$color-melrose: #c5b5ff;
+$color-kournikova: #ffdb77;
+$color-pink-lace: #ffcbec;
+$blaze-orange: #fa6400;
+$color-alizarin-crimson-3: #e02020;
+$color-selective-yellow: #f7b500;
+$color-turquoise: #44d7b6;
+$color-dodger-blue-1: #32c5ff;
+$color-klein-blue: #0031d0;
+$color-electric-violet: #6236ff;
+$color-purple: #b620e0;
+$color-cerise: #e02098;
+$color-punch-1: #da402b;
+$color-bright-green: #6dd400;
+$color-mine-shaft-4: #292929;
+$color-snowbank: #e9e9e9;
+$color-brilliant-azure: #3b99fc;
+$color-light-turquoise: #8aefc8;
+$color-azure-radiance: #0091ff;
+$color-oregon-blue: #4890e2;
+$color-off-black: #303030;
+$color-bai-pearl: #f8f8f8;
+$color-anti-flash: #f2f3f4;
+$color-buttercup: #f6a623;
+
+// Named Variables
+$color-hover: $color-black;
+$color-skorer: $color-trinidad;
+$color-pembenar: $color-amaranth;
+$color-skorer: $color-tangerine;
+$color-uzmanpara: $color-casal;
+
+// Brands
+$color-cropy: $color-turbo2;
+$color-facebook: $color-chambray;
+$color-facebook-hover: $color-bay-of-many;
+$color-googleplus: $color-valencia;
+$color-linkedin: $color-deep-cerulean;
+$color-pinterest: $color-cardinal;
+$color-twitter: $color-picton-blue;
+$color-twitter-hover: $color-cruious-blue-2;
+$color-whatsapp: $color-mantis;
+$color-instagram: $color-black;
+
+//FONT-------------------
+$font-head: "montserrat", sans-serif;
+$font-body: "montserrat", sans-serif;
+$font-arialblack: "Arial Black", Arial, sans-serif;
+
+$font-primary: $font-body !default;
+
+$font-pembenar: "Source Sans Pro", sans-serif;
+
+$font-montserrat: "montserrat", "Trebuchet MS", sans-serif;
+$font-merriweather: "merriweather", "Trebuchet MS", sans-serif;
+
+$milliyet-font-base: "../../fonts/" !default;
+
+//global space-----------
+$global-margin-s: 10px;
+$global-margin: 20px;
+$global-margin-l: 30px;
+$global-margin-xl: 40px;
+
+$header-height: 75px;
+$header-height-mobile: 55px;
+$header-height-two-line: 150px;
+
+$grid-gutter-width: 20px;
+
+$primary-color: #ed1c24; //fanatik primary color.
+$color-mercury: #f2f2f2; // body bg color
+$color-white: #fff;
+$color-black: #000;
+$color-mine-shaft: #333;
+$color-saffron: #f3ce2b;
+$color-red: #ed1d24;
+$border-color: #e5e5e5;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: $color-mercury;
+$color-base: $color-black;
+
+$primary-gradient: linear-gradient(
+  270deg,
+  rgba(255, 128, 133, 1) 0%,
+  rgba(237, 28, 36, 1) 35%
+);
+$secondary-gradient: linear-gradient(270deg, #656565 0%, #353535 100%);
+
+$primary-shadow: 0 0 6px rgba(206, 206, 206, 0.5);
+
+$card-height-xs: 220px;
+$card-height-sm: 220px;
+$card-height-md: 220px;
+$card-height-dp: 250px;
+$card-height-lg: 250px;
+$card-height-xl: 290px;
+$card-height-large: 50px;
+
+$card-text-height-small: 100px;
+$card-text-height-medium: 120px;
+$card-text-height-large: 150px;
+
+$news-detail-width-tablet: 636px;
+$news-detail-width-web: 572px;
+$news-detail-width-prewide: 600px;
+$news-detail-width-wide: 636px;
+
+$card-height-xs-square: 367px;
+$card-height-sm-square: 367px;
+$card-height-md-square: 445px;
+$card-height-dp-square: 401px;
+$card-height-lg-square: 413px;
+$card-height-xl-square: 464px;
+
+$social-media-colors: (
+  facebook: #3b5998,
+  twitter: #55acee,
+  gmail: #c71610,
+  mail: #4890e2,
+  whatsapp: #25d366,
+);

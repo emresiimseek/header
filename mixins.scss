@@ -1,0 +1,429 @@
+//--Browser On ekleri------------------------
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+//--General ---------------------------------
+@mixin line-clamp($count, $line-height: 0) {
+  @if ($line-height !=0) {
+    height: calc(#{$count} * #{$line-height});
+  }
+
+  @if $count==1 {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    overflow: hidden;
+    white-space: inherit;
+
+    @include browser(ie) {
+      display: block;
+    }
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $count;
+
+    /*@if ($line-height) {
+        @include browser(firefox) {
+          height: calc($count * $line-height);
+          somewhere: isHere;
+        }
+      }*/
+  }
+}
+
+//--Clearfix---------------------------------
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+//--Breakpoints------------------------------
+@mixin media($point) {
+  @if $point==mobil {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $point==pre-mobil {
+    @media (min-width: 544px) {
+      @content;
+    }
+  }
+
+  @if $point==ex-small-mobil {
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
+
+  @if $point==ex-small-device {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @if $point==only-ex-small-mobil {
+    @media (max-width: 376px) {
+      @content;
+    }
+  }
+
+  @if $point==only-ex-small-device {
+    @media (min-width: 321px) and (max-width: 599px) {
+      @content;
+    }
+  }
+  @if $point==fold {
+    @media (min-width: 440px) and (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @if $point==only-mobil {
+    @media (min-width: 300px) and (max-width: 480px) {
+      @content;
+    }
+  }
+
+  @if $point==only-small-device {
+    @media (min-width: 451px) and (max-width: 767px) {
+      @content;
+    }
+  }
+
+  @if $point==small-device {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $point==small-and-only-tablet {
+    @include media(only-small-device) {
+      @content;
+    }
+
+    @include media(only-tablet) {
+      @content;
+    }
+  }
+
+  @if $point==mobil-landscape {
+    @media screen and (orientation: landscape) {
+      @content;
+    }
+  } @else if $point==quizframe {
+    @media (min-width: 670px) {
+      @content;
+    }
+  } @else if $point==tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point==max-tablet {
+    @media (min-width: 990px) and (max-width: 1300px) {
+      @content;
+    }
+  } @else if $point==only-tablet {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $point==1024plus {
+    @media (min-width: 1025px) {
+      @content;
+    }
+  } @else if $point==print {
+    @media print {
+      @content;
+    }
+  } @else if $point==web {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point==only-web {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point==web-1280 {
+    @media (min-width: 1025px) and (max-width: 1290px) {
+      @content;
+    }
+  } @else if $point==wide {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point==pre-wide {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  } @else if $point==web-mac13 {
+    @media (min-width: 1150px) and (max-width: 1680px) {
+      @content;
+    }
+  } @else if $point==macbookPro {
+    @media (min-width: 1199px) and (max-width: 1466px) {
+      @content;
+    }
+  } @else if $point==web-1440 {
+    @media (min-width: 1285px) and (max-width: 1680px) {
+      @content;
+    }
+  } @else if $point==max-1450 {
+    @media (min-width: 1285px) and (max-width: 1450px) {
+      @content;
+    }
+  } @else if $point==big {
+    @media (min-width: 1470px) {
+      @content;
+    }
+  } @else if $point==tablet-1025 {
+    @media (min-width: 769px) and (max-width: 1025px) {
+      @content;
+    }
+  } @else if $point==mobile-web {
+    @media (min-width: 375px) and (max-width: 992px) {
+      @content;
+    }
+  } @else if $point==max-web {
+    @media (min-width: 1442px) and (max-width: 1900px) {
+      @content;
+    }
+  } @else if $point==laptop {
+    @media (min-width: 1025px) and (max-width: 1441px) {
+      @content;
+    }
+  } @else if$point==pageskinSize {
+    @media (min-width: 1025px) and (max-width: 1306px) {
+      @content;
+    }
+  } @else if $point==wide-max {
+    @media (min-width: 1470px) {
+      @content;
+    }
+  } @else if $point==pre-wide-expanded {
+    @media (min-width: 992px) and (max-width: 1470px) {
+      @content;
+    }
+  } @else if $point==macbookAir {
+    @media (min-width: 1366px) and (max-width: 1750px) {
+      @content;
+    }
+  }
+}
+
+//--Browser Hacks----------------------------
+@mixin browser($browser) {
+  @if $browser==edge {
+    @supports (-ms-ime-align: auto) {
+      @content;
+    }
+  } @else if $browser==ie10-11 {
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      /* IE 10 - 11 */
+      @content;
+    }
+  } @else if $browser==ie9 {
+    @media screen and (min-width: 0\0) and (min-resolution: 0.001dpcm) {
+      /* IE 9 CSS */
+      @content;
+    }
+  } @else if $browser==ie {
+    @media screen and (min-width: 0\0) and (min-resolution: 72dpi) {
+      /* IE9+ CSS */
+      @content;
+    }
+  } @else if $browser==firefox {
+    @-moz-document url-prefix() {
+      @content;
+    }
+  } @else if $browser == safari {
+    @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+      @content;
+    }
+  }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+$map-grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+@mixin media-down($arg) {
+  @if map-has-key($map-grid-breakpoints, $arg) {
+    @media (max-width: #{map-get($map-grid-breakpoints, $arg) - 1}px) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// -- Border Radius --
+@mixin radius($radiusValue) {
+  -webkit-border-radius: $radiusValue + px;
+  -moz-border-radius: $radiusValue + px;
+  -o-border-radius: $radiusValue + px;
+  border-radius: $radiusValue + px;
+}
+
+// -- Z-index --
+@mixin z-index($index) {
+  z-index: $index * 1000;
+}
+
+// -- Transition --
+@mixin transition($transition) {
+  transition: $transition;
+}
+
+// -- Transform --
+@mixin transform($transform) {
+  transform: $transform;
+}
+
+// -- table columns for responsive width --
+@mixin widthForTableColumns(
+  $mobileWidth,
+  $tabletWidth,
+  $webWidth,
+  $preWideWidth,
+  $wideWidth
+) {
+  width: $mobileWidth;
+
+  @include media(tablet) {
+    width: $tabletWidth;
+  }
+
+  @include media(web) {
+    width: $webWidth;
+  }
+
+  @include media(wide) {
+    width: $wideWidth;
+  }
+
+  @include media(pre-wide) {
+    width: $preWideWidth;
+  }
+}
+
+@mixin customScroll($width, $radius, $color) {
+  &::-webkit-scrollbar {
+    width: $width; // 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color;
+    // $color-gray;
+    border-radius: $radius; // 4px;
+  }
+
+  &::-webkit-resizer {
+    display: none;
+  }
+
+  scrollbar-width: thin;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin weatherIcon($status) {
+  &[data-weather-status="#{$status}"] {
+    background: url("../../images/weather/#{$status}.svg");
+  }
+}
+
+@mixin aspect-ratio-img($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+/*draft*/
+
+@mixin placeHolder($pwidth, $pheight, $color: "") {
+  width: $pwidth;
+  min-height: $pheight;
+  background-color: $color;
+}
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
+}
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+
+@mixin e100 {
+  -webkit-transition: all 100ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -moz-transition: all 100ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -o-transition: all 100ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 100ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+@mixin e200 {
+  -webkit-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -moz-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  -o-transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+  transition: all 200ms cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+@mixin e500 {
+  -webkit-transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@mixin e1000 {
+  -webkit-transition: all 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: all 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: all 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
